@@ -22,7 +22,7 @@ public class NotificationScreen extends  AbstractScreen{
 
 
     @Autowired
-    public NotificationScreen(AndroidDriver driver) {
+    public NotificationScreen(AndroidDriver<?> driver) {
         super(driver);
     }
 

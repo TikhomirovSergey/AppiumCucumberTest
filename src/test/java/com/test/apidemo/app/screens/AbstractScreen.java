@@ -15,9 +15,9 @@ import java.util.concurrent.TimeUnit;
 
 public abstract class AbstractScreen {
 
-    public AndroidDriver driver;
+    public AndroidDriver<?> driver;
 
-    public AbstractScreen(AndroidDriver driver) {
+    public AbstractScreen(AndroidDriver<?> driver) {
         // TODO Auto-generated constructor stub
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver, 15,

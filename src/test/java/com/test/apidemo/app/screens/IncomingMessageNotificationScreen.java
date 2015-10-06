@@ -18,7 +18,7 @@ public class IncomingMessageNotificationScreen extends  AbstractScreen{
     private WebElement showAppNotificationElement;
 
     @Autowired
-    public IncomingMessageNotificationScreen(AndroidDriver driver) {
+    public IncomingMessageNotificationScreen(AndroidDriver<?> driver) {
         super(driver);
     }
 

@@ -20,7 +20,7 @@ public class SecureSurfaceScreen extends AbstractScreen {
     private WebElement secureDialogElement;
 
     @Autowired
-    public SecureSurfaceScreen(AndroidDriver driver) {
+    public SecureSurfaceScreen(AndroidDriver<?> driver) {
         super(driver);
     }
 

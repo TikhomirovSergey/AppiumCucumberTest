@@ -48,11 +48,11 @@ public class AppUtils {
 
     private DesiredCapabilities capabilities;
     private URL serverUrl;
-    private AndroidDriver androidDriver;
+    private AndroidDriver<?> androidDriver;
 
     @Bean(destroyMethod = "quit")
     @Scope("cucumber-glue")
-    public AndroidDriver getDriver() throws MalformedURLException {
+    public AndroidDriver<?> getDriver() throws MalformedURLException {
         capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, browserName);
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, platformVersion);
@@ -64,7 +64,7 @@ public class AppUtils {
         capabilities.setCapability(MobileCapabilityType.APP_PACKAGE, basePkg);
         capabilities.setCapability(MobileCapabilityType.APP_ACTIVITY, appActivity);
         serverUrl = new URL("http://localhost:" + appiumPort + "/wd/hub");
-        androidDriver = new AndroidDriver(serverUrl, capabilities);
+        androidDriver = new AndroidDriver<>(serverUrl, capabilities);
         androidDriver.manage().timeouts().implicitlyWait(implicitWaitTime, TimeUnit.SECONDS);
         return androidDriver;
     }

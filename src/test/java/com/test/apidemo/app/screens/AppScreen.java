@@ -24,7 +24,7 @@ public class AppScreen extends AbstractScreen {
     private WebElement appNotificationElement;
 
     @Autowired
-    public AppScreen(AndroidDriver driver) {
+    public AppScreen(AndroidDriver<?> driver) {
         super(driver);
     }
 

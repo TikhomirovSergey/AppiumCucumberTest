@@ -18,7 +18,7 @@ public class HomeScreen extends AbstractScreen {
     private WebElement appMenuElement;
 
     @Autowired
-    public HomeScreen(AndroidDriver driver) {
+    public HomeScreen(AndroidDriver<?> driver) {
         super(driver);
     }
 

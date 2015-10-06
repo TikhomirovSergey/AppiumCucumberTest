@@ -21,7 +21,7 @@ public class ActivityScreen extends AbstractScreen {
     private WebElement secureSurfaceElement;
 
     @Autowired
-    public ActivityScreen(AndroidDriver driver) {
+    public ActivityScreen(AndroidDriver<?> driver) {
         super(driver);
     }
 
